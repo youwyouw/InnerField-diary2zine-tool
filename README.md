@@ -1,16 +1,16 @@
 # Inner Field — Archive a Volume
 
-[中文说明](#中文说明) · [English](#english)
+[中文](#中文) · [English](#english)
 
 ![twelve noise renderers](noise-styles.png)
 
 ---
 
-## 中文说明
+## 中文
 
 一个 Claude skill：把你和 AI 之间一轮日记式对话，排版成一本可以打印的黑白 zine（A4 PDF）。
 
-它不只是一个排版器，更像一个小型出版系统。每一卷都会有：
+你可以把它视为一个排版器或小型出版系统。每一卷都会有：
 
 - 封面：一张由这卷文字本身生成的噪声图（同样的文字永远生成同一张图，改一个字就完全不同）
 - 正文：对话原文，一字不改
@@ -51,7 +51,7 @@ git clone https://github.com/youwyouw/InnerField-diary2zine-tool ~/.claude/skill
 A Claude skill that typesets one round of a private diary conversation as a
 printable black-and-white zine, delivered as an A4 PDF.
 
-It is a small publishing system rather than a formatter. Each volume gets a
+It can be seen as a formatter, or a small publishing system. Each volume gets a
 cover plate generated from its own text, a closing essay written through a
 rotating set of analytical lenses, a short poem, a colour-and-smell piece, an
 optional film treatment, and a question carried forward to the next volume.
