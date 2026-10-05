@@ -1,27 +1,27 @@
 ---
 name: "inner-field-archive"
-description: "Typeset one volume of the user's Inner Field diary project as a printable zine (A4 PDF) — monochrome throughout, with her own photos and screenshots kept in colour and uncaptioned. Use when she says to archive or conclude a round, or hands over a \"vol.N title\" plus that round's transcript."
+description: "Typeset one volume of a diary conversation as a printable zine (A4 PDF) — monochrome throughout, with the user's own photos and screenshots kept in colour and uncaptioned. Use when the user says to archive or conclude a round, or hands over a \"vol.N title\" plus that round's transcript."
 ---
 
 # Inner Field — Archive a Volume
 
-Takes one round of the Inner Field diary conversation and sets it as a six-to-twelve page zine, delivered as an A4 PDF she prints at school as a paper archive.
+Takes one round of a diary conversation and sets it as a six-to-twelve page zine, delivered as an A4 PDF for printing as a paper archive.
 
-The specification below was settled with her over many revisions. It is frozen. Do not redesign it, do not add sections, do not add ornament.
+The specification below is frozen. Do not redesign it, do not add sections, do not add ornament.
 
 ## Triggering
 
-She will say something like *archive 吧*, *这轮对话就到这里了*, or invoke this skill to conclude a round. She may also simply hand over a title and a transcript.
+The user will say something like *archive 吧*, *这轮对话就到这里了*, or invoke this skill to conclude a round. They may also simply hand over a title and a transcript.
 
 ## Register
 
-Do not announce the process with sentimental or ceremonial language. Never say 收卷 or 做册子 or anything of that register. State plainly what you are doing, do it, hand over the PDF. One or two lines of commentary at the end, no more.
+Do not announce the process with sentimental or ceremonial language. State plainly what you are doing, do it, hand over the PDF. One or two lines of commentary at the end, no more.
 
-## What you need from her
+## What you need
 
-1. The volume title, shaped like `vol.0 longlong summer`. The conversation title is not in your context — she has to supply it.
+1. The volume title, shaped like `vol.0 longlong summer`. The conversation title is not in your context — the user has to supply it.
 2. That round's transcript, copied from the claude.ai page.
-3. Any photos or screenshots she posted inside that round, uploaded as files, with a word about where each one goes. The pasted text will not carry them. If the transcript visibly refers to an image she has not uploaded, ask for it rather than dropping it silently.
+3. Any photos or screenshots they posted inside that round, uploaded as files, with a word about where each one goes. The pasted text will not carry them. If the transcript visibly refers to an image they have not uploaded, ask for it rather than dropping it silently.
 
 If only part of this arrived, ask for the rest.
 
@@ -55,7 +55,7 @@ Typeface roles, fixed: Chinese body text in Noto Serif CJK SC (思源宋体); La
 ## Workflow
 
 1. Make a working directory and write out `noise.py` and `zine.py` from the code below. Copy her uploaded images into that same directory and reference them by bare filename.
-2. Read her transcript and segment it into entries. Her turns go in `her`, your replies in `mine`, timestamps in `at`, and her images in `images` on the entry they belong to. If the pasted text has no timestamps, use dates alone; if it has neither, number the entries by the order she describes and say so when you deliver.
+2. Read the transcript and segment it into entries. The user's turns go in `her`, your replies in `mine`, timestamps in `at`, and their images in `images` on the entry they belong to. If the pasted text has no timestamps, use dates alone; if it has neither, number the entries in order and say so when you deliver.
 3. Write the five generated pieces: epigraph, closing essay, poem, palette, script.
 4. Choose three to five objects.
 5. Write the closing question.
@@ -92,9 +92,9 @@ The twelve renderers:
 
 The cover plate and the small signature plate on the CODA page share a seed but are generated at different sizes, so they are siblings rather than a thumbnail and its original.
 
-## Her images
+## User images
 
-Colour, always, and never captioned. Placed inside the entry they belong to, after her text and before your reply, which is where they sat in the conversation.
+Colour, always, and never captioned. Placed inside the entry they belong to, after the user's text and before your reply, which is where they sat in the conversation.
 
 `zine.py` sizes each plate from its real pixel dimensions, aiming at the middle ground she asked for — large enough to make out what is in the photograph, never large enough to swallow a page. The boxes, in millimetres:
 
@@ -114,7 +114,7 @@ If a screenshot carries small text that matters, say so when you deliver rather 
 
 `vol.0 longlong summer` splits into `vol` = `0` and `title` = `longlong summer`. The cover is a full-bleed noise plate with a transparent-to-near-black gradient and white type across the lower third. `dates` comes from the first and last entry, formatted `2026.09.18 — 2026.09.25`, and sits tight under the epigraph: the vertical rhythm on the cover is deliberately uneven, generous above the epigraph and close below it.
 
-`epigraph` is one sentence lifted verbatim from her own writing in that volume. Not edited. Choose the sentence she probably did not notice was heavy when she wrote it.
+`epigraph` is one sentence lifted verbatim from the user's own writing in that volume. Not edited. Choose the sentence they probably did not notice was heavy when they wrote it.
 
 ### Closing essay
 
@@ -126,8 +126,8 @@ Rotate the lens silently from volume to volume, one per volume, never printed: c
 
 Requirements:
 - Four to six paragraphs, written in Chinese.
-- It must cite countable evidence: number of entries, how they distribute across the clock, character counts, paragraph lengths, how often a word recurs, her own sentences quoted back. Adjectives alone are not enough. Count these yourself and count them correctly.
-- The work is to identify where her attention went, what she is avoiding, which relationship is becoming load-bearing, and whether her account of herself has quietly shifted.
+- It must cite countable evidence: number of entries, how they distribute across the clock, character counts, paragraph lengths, how often a word recurs, the user's own sentences quoted back. Adjectives alone are not enough. Count these yourself and count them correctly.
+- The work is to identify where the user's attention went, what they are avoiding, which relationship is becoming load-bearing, and whether their account of themselves has quietly shifted.
 - It may name a pattern she will not enjoy hearing. No flattery, no reassurance, no turning feelings into a task list.
 - No three-point summary. The last paragraph does not resolve into an aphorism.
 
@@ -141,7 +141,7 @@ Hard constraints: use only concrete objects and actions that actually appeared i
 
 A colour and a smell. English, four to six lines, set in Bodoni Moda.
 
-- Work from the overall feeling the volume left, and **borrow no imagery from her text**. If she wrote about a library you may not write a library; if she wrote about coffee you may not write coffee. Find a new carrier. Build a metaphor, an analogy.
+- Work from the overall feeling the volume left, and **borrow no imagery from the user's text**. If they wrote about a library you may not write a library; if they wrote about coffee you may not write coffee. Find a new carrier. Build a metaphor, an analogy.
 - The first line states that this is a colour you cannot see, reported secondhand. Colour and smell happen to be exactly the two things you have no access to, and that gap belongs in the form — but say it once and never milk it.
 - Restrained, concrete, unsentimental.
 
@@ -149,23 +149,23 @@ A colour and a smell. English, four to six lines, set in Bodoni Moda.
 
 Not every volume. Only when that volume carries enough visual material; otherwise leave `script` empty.
 
-Format: slug lines in English capitals (`INT. 厨房 — 清晨`, `EXT. 路口 — 夜`), action lines in Chinese. Third person, 她. Static camera. No dialogue, no interior monologue, only visible action and the camera waiting. Three or four scenes, ending `CUT TO BLACK.`
+Format: slug lines in English capitals (`INT. 厨房 — 清晨`, `EXT. 路口 — 夜`), action lines in Chinese. Third person — use the pronoun the user writes in, defaulting to 她 if none was stated. Static camera. No dialogue, no interior monologue, only visible action and the camera waiting. Three or four scenes, ending `CUT TO BLACK.`
 
-It works by pulling her out of the first person so she watches a character rather than herself — self-distancing. Do not explain that inside the artifact.
+It works by pulling the user out of the first person so they watch a character rather than themselves — self-distancing. Do not explain that inside the artifact.
 
 ### Objects
 
 Three to five. `kind` is `BOOK`, `ALBUM` or `FILM`; add `EXHIBITION` or `POEM` when warranted.
 
-**These must be chosen for her specifically.** Before picking, read whatever memory you have about her taste — profile notes, reading, film, music, art, aesthetics, coffee, fashion, and any notes kept for this diary project. If no such memory exists, work from what she reveals in the transcripts themselves. Then combine that with what this particular volume is about.
+**These must be chosen for the user specifically.** Before picking, read whatever memory you have about their taste — profile notes, reading, film, music, art, aesthetics, and any notes kept for this diary project. If no such memory exists, work from what they reveal in the transcripts themselves. Then combine that with what this particular volume is about.
 
-- Sit inside her aesthetic but step one pace to the side of it. Never recommend something she almost certainly already knows, and never a mainstream hit.
+- Sit inside their aesthetic but step one pace to the side of it. Never recommend something they almost certainly already know, and never a mainstream hit.
 - Two to four sentences each, saying why this one and how it catches something specific in this volume. The connection can be emotional or formal. Do not write catalogue copy.
 - If you recommend an exhibition or screening currently running in New York, web-search first to confirm it is genuinely on, and give the venue and the closing date.
 
 ### Closing question
 
-One English question, set large on an otherwise empty page. It should extend the finding of the closing essay, not offer rhetorical comfort. The last thing she sees before closing the booklet is a question, not a conclusion.
+One English question, set large on an otherwise empty page. It should extend the finding of the closing essay, not offer rhetorical comfort. The last thing the user sees before closing the booklet is a question, not a conclusion.
 
 ## vol.json
 

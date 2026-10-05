@@ -35,13 +35,13 @@
 **在 Claude Code 里：**
 
 ```bash
-git clone https://github.com/<your-username>/inner-field-archive ~/.claude/skills/inner-field-archive
+git clone https://github.com/youwyouw/InnerField-diary2zine-tool ~/.claude/skills/inner-field-archive
 ```
 
 ### 小提示
 
 - 结语和推荐书单会参考 Claude 对你的记忆（Memory）。记忆越多，推荐越贴近你。
-- skill 里默认用「她」指代写日记的人，如果你想换成「他」或别的称呼，直接编辑 `SKILL.md` 即可。
+- SCRIPT 部分默认用「她」指代写日记的人；如果你在对话里写过「他」或别的称呼，Claude 会自动跟随你的用法。
 - 你的日记、`vol*.json` 和生成的 PDF 都在 `.gitignore` 里，fork 之后不会被误传到 GitHub。
 
 ---
@@ -92,7 +92,7 @@ upload it under Settings → Capabilities → Skills. Code execution must be on.
 **Claude Code:**
 
 ```bash
-git clone https://github.com/<your-username>/inner-field-archive ~/.claude/skills/inner-field-archive
+git clone https://github.com/youwyouw/InnerField-diary2zine-tool ~/.claude/skills/inner-field-archive
 ```
 
 Then, at the end of a round of diary conversation, say "archive" and hand over
