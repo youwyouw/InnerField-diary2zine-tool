@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.pdf
+_cover.png
+_sig.png
+vol*.json
